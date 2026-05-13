@@ -1,0 +1,156 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+nav{
+    background-color: #00aaff;
+    padding: 15px 20px;
+    position: relative;
+}
+
+
+.logo{
+    font-size: 14px;   
+    font-weight: bold;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+
+    position: absolute;
+    left: 20px;
+    top: 18px;
+}
+
+ul{
+    list-style: none;
+    text-align: center;
+}
+
+ul li{
+    display: inline-block;
+    margin: 0px 18px;
+}
+ul li a{
+    text-decoration: none;
+    color: white;
+    font-family: 'Georgia', serif;
+    font-size: 20px;
+}
+ul li a:hover{
+    color: gray;
+    
+}
+.user{
+    padding: 2px 12px;   
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: rgb(140, 170, 219);
+    color: white;
+    font-family: 'tahoma', sans-serif;
+    font-size: 10px; 
+    position: absolute;
+    right: 20px;
+    top: 10px;
+}
+
+.hero{
+    min-height: 90vh;
+    padding: 60px;
+}
+
+
+
+.hero-left{
+    width: 50%;
+    float: left;
+
+    padding-top: 100px;
+}
+
+.hero-left h1{
+    font-size: 52px;
+    line-height: 1.2;
+    color: #222;
+
+    margin-bottom: 25px;
+}
+
+.hero-left span{
+    color: #00aaff;
+}
+
+.hero-left p{
+    font-size: 18px;
+    line-height: 1.7;
+    color: #666;
+
+    margin-bottom: 30px;
+}
+
+
+
+.hero-left button{
+    background-color: #00aaff;
+    color: white;
+
+    border: none;
+    padding: 16px 30px;
+
+    font-size: 16px;
+    border-radius: 10px;
+
+    cursor: pointer;
+}
+.hero-left button:hover{
+    color: blue;
+    background-color: #ccc;
+    
+}
+
+
+
+.hero-right{
+    width: 50%;
+    float: right;
+
+    text-align: center;
+}
+
+.hero-right img{
+    width: 100%;
+    max-width: 550px;
+}
+
+
+.hero::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+
+@media(max-width:768px){
+
+    .hero{
+        padding: 40px 20px;
+        text-align: center;
+    }
+
+    .hero-left,
+    .hero-right{
+        width: 100%;
+        float: none;
+    }
+
+    .hero-left{
+        margin-bottom: 40px;
+        padding-top: 20px;
+    }
+
+    .hero-left h1{
+        font-size: 38px;
+    }
+}
