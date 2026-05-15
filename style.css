@@ -4,78 +4,69 @@
     box-sizing: border-box;
 }
 
-
-
 nav{
     background-color: #00aaff;
-    padding: 15px 20px;
-    position: relative;
+    padding: 15px 40px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-
 .logo{
-    font-size: 14px;   
+    font-size: 22px;
     font-weight: bold;
     color: white;
     font-family: 'Courier New', Courier, monospace;
-
-    position: absolute;
-    left: 20px;
-    top: 18px;
 }
 
 ul{
     list-style: none;
-    text-align: center;
+
+    display: flex;
+    gap: 30px;
 }
 
-ul li{
-    display: inline-block;
-    margin: 0px 18px;
-}
 ul li a{
     text-decoration: none;
     color: white;
     font-family: 'Georgia', serif;
     font-size: 20px;
 }
+
 ul li a:hover{
     color: gray;
-    
 }
+
 .user{
-    padding: 2px 12px;   
-    border: 1px solid #ccc;
+    padding: 8px 16px;
+    border: none;
     border-radius: 8px;
     background-color: rgb(140, 170, 219);
     color: white;
-    font-family: 'tahoma', sans-serif;
-    font-size: 10px; 
-    position: absolute;
-    right: 20px;
-    top: 10px;
+    font-family: 'Tahoma', sans-serif;
+    cursor: pointer;
 }
 
 .hero{
     min-height: 90vh;
     padding: 60px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
 }
-
-
 
 .hero-left{
     width: 50%;
-    float: left;
-
-    padding-top: 100px;
 }
 
 .hero-left h1{
     font-size: 52px;
     line-height: 1.2;
-    color: #222;
-
     margin-bottom: 25px;
+    color: #222;
 }
 
 .hero-left span{
@@ -86,36 +77,26 @@ ul li a:hover{
     font-size: 18px;
     line-height: 1.7;
     color: #666;
-
     margin-bottom: 30px;
 }
-
-
 
 .hero-left button{
     background-color: #00aaff;
     color: white;
-
     border: none;
     padding: 16px 30px;
-
     font-size: 16px;
     border-radius: 10px;
-
     cursor: pointer;
 }
+
 .hero-left button:hover{
-    color: blue;
     background-color: #ccc;
-    
+    color: blue;
 }
-
-
 
 .hero-right{
     width: 50%;
-    float: right;
-
     text-align: center;
 }
 
@@ -124,33 +105,69 @@ ul li a:hover{
     max-width: 550px;
 }
 
+@media(max-width:1024px){
 
-.hero::after{
-    content: "";
-    display: block;
-    clear: both;
+    .logo{
+        font-size: 18px;
+    }
+
+    ul li a{
+        font-size: 16px;
+    }
+
+    .user{
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+
+    .hero-left h1{
+        font-size: 40px;
+    }
+
+    .hero-left p{
+        font-size: 16px;
+    }
+
+    .hero-right img{
+        max-width: 420px;
+    }
 }
-
 
 @media(max-width:768px){
 
+    nav{
+        padding: 15px 20px;
+    }
+
+    ul{
+        display: none;
+    }
+
+    .logo{
+        font-size: 18px;
+    }
+
+    .user{
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+
     .hero{
-        padding: 40px 20px;
+        flex-direction: column;
         text-align: center;
+        padding: 40px 20px;
     }
 
     .hero-left,
     .hero-right{
         width: 100%;
-        float: none;
-    }
-
-    .hero-left{
-        margin-bottom: 40px;
-        padding-top: 20px;
     }
 
     .hero-left h1{
-        font-size: 38px;
+        font-size: 34px;
+    }
+
+    .hero-right img{
+        max-width: 100%;
     }
 }
